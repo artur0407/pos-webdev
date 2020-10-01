@@ -1,0 +1,61 @@
+version: "3"
+services:
+  apache:
+    build:
+      context: ./config/dockerfiles/apache
+    volumes:
+      - "./:/var/www/htdocs"
+      - "./config/dockerfiles/apache/confs:/usr/local/apache2/conf/custom.conf.d"
+    ports:
+      - "80:80"
+    depends_on:
+      - php
+
+  php:
+    build:
+      context: ./config/dockerfiles/php
+    volumes:
+      - "./:/var/www/htdocs"
+    ports:
+      - "9000:9000"
+    depends_on:
+      - db
+    environment:
+      - MYSQL_USER
+      - MYSQL_PASS
+      - MYSQL_DATABASE
+      - MYSQL_ROOT_PASSWORD
+
+  db:
+    image: mariadb
+    environment:
+      - MYSQL_ROOT_PASSWORD
+      - MYSQL_USER
+      - MYSQL_PASSWORD
+      - MYSQL_DATABASE
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - 3306:3306
+
+  adminer:
+    image: adminer
+    depends_on:
+      - db
+    ports:
+      - 9001:8080
+
+volumes:
+  mysql_data:
+
+networks:
+  default:
+    driver: bridge
+
+#zf:
+#  build: .
+#  dockerfile: Dockerfile
+#  ports:
+#    - "80:80"
+#  volumes:
+#    - .:/var/www

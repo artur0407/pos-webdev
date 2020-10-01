@@ -1,0 +1,41 @@
+<?php
+$this->headTitle('Manage Authors');
+
+$this->mainMenu()->setActiveItemId('authors');
+
+?>
+
+<h1>Manage Author</h1>
+
+<table class="table table-striped">
+
+   <tr>
+        <th>ID      </th>
+        <th>Name    </th>
+        <th>Email   </th>
+        <th>Status  </th>        
+    </tr>
+    
+    <?php  foreach ($authors as $author): ?>
+
+    <tr>
+        <td>
+            <?= $this->escapeHtml($author->getId()); ?>
+        </td>
+        <td>
+            <a href="<?= $this->url('application', 
+                ['action'=>'index'], ['query'=>['author'=>$author->getId()]]); ?>">
+                <?= $this->escapeHtml($author->getName()); ?>
+            </a>
+        </td>
+        <td>
+            <?= $author->getDateCreated()->format('d/m/Y H:i'); ?>
+        </td>
+        <td> 
+            <?= $this->escapeHtml($postManager->getAuthorStatusAsString($author)); ?>
+        </td>  
+    </tr>
+        
+    <?php endforeach; ?>   
+    
+</table>
