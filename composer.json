@@ -1,0 +1,13 @@
+{
+    "name": "vendor/name",
+    "authors": [
+        {
+            "name": "Artur Web",
+            "email": "arturpztlopes@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "9"
+    }
+}
