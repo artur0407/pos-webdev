@@ -1,13 +1,12 @@
 <?php
-
-namespace src;
+namespace Exercicio;
 
 /** 
  * Class Pessoa
  * Representa a pessoa que entratá no edificio e usará o elevador
  * @author Artur Pazeto Lopes <arturpztlopes@gmail.com> 
  * @access public 
- * @version 1.0.2
+ * @version 1.1.0
  * 
  * */
 class Pessoa

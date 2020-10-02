@@ -1,12 +1,12 @@
 <?php
-namespace src;
+namespace Exercicio;
 
 /** 
  * Class Edificio
  * Representa a construção que contem o elevador e os andares do prédio
  * @author Artur Pazeto Lopes <arturpztlopes@gmail.com> 
  * @access public 
- * @version 1.0.2
+ * @version 1.1.0
  * 
  * */
 class Edificio 

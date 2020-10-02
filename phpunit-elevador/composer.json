@@ -1,13 +1,17 @@
 {
-    "name": "vendor/name",
+    "name": "artur0407/elevador-phpunit",
+    "description": "Simulação do comportamento de um elevador usando testes unitários",
+    "license": "MIT",
+    "type": "project",
     "authors": [
-        {
-            "name": "Artur Web",
-            "email": "arturpztlopes@gmail.com"
-        }
+        {"name":"Artur Lopes", "email": "arturpztlopes@gmail.com"}
     ],
-    "require": {},
-    "require-dev": {
-        "phpunit/phpunit": "9"
+    "autoload":{
+        "psr-4":{
+            "Exercicio\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.0"
     }
 }

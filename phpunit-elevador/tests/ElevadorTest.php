@@ -1,6 +1,6 @@
 <?php
 use PHPUnit\Framework\TestCase;
-use src\Elevador;
+use Exercicio\Elevador;
 
 class ElevadorTest extends TestCase 
 {

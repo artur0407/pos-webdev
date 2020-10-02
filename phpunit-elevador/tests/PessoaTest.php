@@ -1,6 +1,6 @@
 <?php
 use PHPUnit\Framework\TestCase;
-use src\Edificio;
+use Exercicio\Edificio;
 
 class PessoaTest extends TestCase 
 {

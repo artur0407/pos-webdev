@@ -1,15 +1,14 @@
 <?php
+namespace Exercicio;
 
 /** 
  * Class Elevador
  * Responsável por retornar o andar inicial e andar final após acionado
  * @author Artur Pazeto Lopes <arturpztlopes@gmail.com> 
  * @access public 
- * @version 1.0.2
+ * @version 1.1.0
  * 
  * */
-namespace src;
-
 class Elevador 
 {
 	private $andarOrigem;
@@ -28,16 +27,16 @@ class Elevador
 
     public function getAndarOrigem() 
     {
-		    return $this->andarOrigem;
+		return $this->andarOrigem;
     }
     
     public function setAndarDestino($andarDestino) 
     {
-		    $this->andarDestino = $andarDestino;
-	  }
+		$this->andarDestino = $andarDestino;
+	}
 
     public function getAndarDestino() 
     {
-		    return $this->andarDestino;
-	  }
+		return $this->andarDestino;
+	}
 }
